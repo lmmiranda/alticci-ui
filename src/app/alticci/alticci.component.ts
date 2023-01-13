@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlticciService } from './alticci.service';
 
 @Component({
   selector: 'app-alticci',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlticciComponent implements OnInit {
 
-  constructor() { }
+  n: number = 100;
+  value: number = 0;
+
+  constructor(private alticciService: AlticciService) { }
 
   ngOnInit(): void {
   }
 
+  handleClick() {
+    this.alticciService.calculate(this.n).subscribe(value => this.value = value as number);
+  }
 }

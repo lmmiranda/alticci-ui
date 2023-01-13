@@ -6,15 +6,15 @@
     </div>
 
     <div class="mb-3">
-      <input type="number" class="form-control" placeholder="Insira o índice desejado">
+      <input type="number" [(ngModel)]="n" class="form-control" placeholder="Insira o índice desejado">
     </div>
 
     <div class="col-md-12 text-center mb-5">
-      <button class="btn btn-primary btn-md" type="button">Calcular</button>
+      <button class="btn btn-primary btn-md" type="button" (click)="handleClick()">Calcular</button>
     </div>
 
-    <div class="col-md-12 text-center">
-      O valor correspondente é 8888888
+    <div class="col-md-12 text-center" *ngIf="value">
+      O valor correspondente é {{value}}
     </div>
   </div>
 </div>
