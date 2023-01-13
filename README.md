@@ -14,4 +14,4 @@
 ```
 4 - npm install && npm start
 ```
-5 - Após a instalção e o build o navegador será aberto no endereço: http://localhost:4200/
+5 - Após a instalação e o build o navegador será aberto no endereço: http://localhost:4200/
